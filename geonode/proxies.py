@@ -391,7 +391,7 @@ class Proxylist:
             return random.choice(data_list)
         except Exception as e:
             return f"Error: {e}"
-    
+
     def get_proxies_only(self):
         weblink = self.get_link()
         data_json = requests.get(weblink).json()
@@ -412,26 +412,3 @@ class Proxylist:
         weblink = self.get_link()
         rdata = requests.get(weblink)
         return rdata
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
