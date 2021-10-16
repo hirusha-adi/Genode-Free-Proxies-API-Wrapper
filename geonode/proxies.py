@@ -16,7 +16,29 @@ class Proxylist:
                  org_and_asn: int = None,
                  country: int = None, country_code_custom: str = None
                  ):
+        """All of this arguments are optional! We provide complete customizability to the user!
 
+        Args:
+            limit (int, optional): The limit of proxies you need, the overrides the page parameter. Defaults to 50.
+            page (int, optional): Number of pages for the results. Defaults to 1. Each page has 50 results
+            sort_by (str, optional): Sort by as in the Original Geonode API. You need to pass the exact same name. Defaults to "lastChecked".
+            sort_type (str, optional): asc or desc (Ascending or Descending). The sort type. Defaults to "desc".
+            google_passed (int, optional): Weather the proxies have passed the google ping test. Defaults to 1 - Do nothing. 2 - True. 3 - False
+            anonymity_HIA (bool, optional): Set the anonimity to elite. Defaults to True.
+            anonymity_ANM (bool, optional): Set the anonimity to anonymous. Defaults to True.
+            anonymity_NOA (bool, optional): Set the anonimity to transparent. Defaults to True.
+            speed (int, optional): Proxy speed. Defaults to None. 1 - Slow. 2 - Medium. 3 - Fast
+            port (int, optional): Show results of the given port. Defaults to None. You can pass any valid port number you want
+            p_http (bool, optional): Filter only HTTP proxies. Defaults to True.
+            p_https (bool, optional): Filter only HTTPS proxies. Defaults to True.
+            p_socks4 (bool, optional): Filter only SOCKS4 proxies. Defaults to True.
+            p_socks5 (bool, optional): Filter only SOCKS5 proxies. Defaults to True.
+            uptime (int, optional): Filter uptime. Defaults to None. 
+            last_checked (int, optional): Filter last checked. Defaults to None. Value should be given in seconds
+            org_and_asn (int, optional): [description]. Defaults to None.
+            country (int, optional): [description]. Defaults to None.
+            country_code_custom (str, optional): [description]. Defaults to None.
+        """
         # Base
         self.limit = limit
         self.page = page
