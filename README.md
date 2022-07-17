@@ -9,7 +9,7 @@ Scrap proxies easily with a simple knwoledge in python3 (all you need to know is
 
 # Usage
 
-```
+```python
 import geonode
 prox = geonode.Proxylist()
 proxies = prox.get_proxies_only()
